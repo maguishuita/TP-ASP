@@ -19,7 +19,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Ajout du modèle personnalisé
-builder.Services.AddScoped<DegueneFallPizza>();
+builder.Services.AddScoped<PizzeriaContext>();
 
 var app = builder.Build();
 
@@ -30,6 +30,7 @@ using (var scope = app.Services.CreateScope())
     try
     {
         var context = services.GetRequiredService<PizzeriaContext>();
+        context.Database.EnsureCreated();
         DbInitializer.Initialize(context);
     }
     catch (Exception ex)
@@ -68,16 +69,12 @@ app.MapGet("/api/pizzas/{id}", async (PizzeriaContext db, int id) =>
         ? Results.Ok(pizza)
         : Results.NotFound());
 
-
-
 app.MapPost("/api/pizzas", async (PizzeriaContext db, DegueneFallPizza pizza) =>
 {
-    Console.WriteLine($"Received: Nom={pizza.Nom}, Description={pizza.Description}");
     db.DegueneFallPizzas.Add(pizza);
     await db.SaveChangesAsync();
     return Results.Created($"/api/pizzas/{pizza.Id}", pizza);
 });
-
 
 app.MapPut("/api/pizzas/{id}", async (PizzeriaContext db, int id, DegueneFallPizza inputPizza) =>
 {

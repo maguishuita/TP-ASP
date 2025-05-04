@@ -6,18 +6,29 @@ namespace Pizzeria.Data
     {
         public static void Initialize(PizzeriaContext context)
         {
-            context.Database.EnsureCreated(); // Création si pas encore existante
+            // S'assurer que la base de données existe
+            context.Database.EnsureCreated();
 
+            // Vérifier s'il y a déjà des pizzas
             if (context.DegueneFallPizzas.Any())
-                return; // Données déjà insérées
+            {
+                return;   // La base de données a déjà été initialisée
+            }
 
+            // Ajouter quelques pizzas de test
             var pizzas = new DegueneFallPizza[]
             {
-                new DegueneFallPizza { Nom = "Margherita", Description = "Tomate, mozzarella, basilic" },
-                new DegueneFallPizza { Nom = "Reine", Description = "Jambon, champignons, fromage" }
+                new DegueneFallPizza { Nom = "Margherita", Description = "Sauce tomate, mozzarella, basilic" },
+                new DegueneFallPizza { Nom = "Reine", Description = "Sauce tomate, mozzarella, jambon, champignons" },
+                new DegueneFallPizza { Nom = "4 Fromages", Description = "Sauce tomate, mozzarella, chèvre, roquefort, emmental" },
+                new DegueneFallPizza { Nom = "Végétarienne", Description = "Sauce tomate, mozzarella, légumes grillés, olives" }
             };
 
-            context.DegueneFallPizzas.AddRange(pizzas);
+            foreach (var pizza in pizzas)
+            {
+                context.DegueneFallPizzas.Add(pizza);
+            }
+
             context.SaveChanges();
         }
     }

@@ -27,27 +27,3 @@ build_property.MSBuildProjectDirectory = C:\Users\falld\source\repos\Pizzeria
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
-
-[C:/Users/falld/source/repos/Pizzeria/Views/DegueneFallPizzas/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVndWVuZUZhbGxQaXp6YXNcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/falld/source/repos/Pizzeria/Views/DegueneFallPizzas/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVndWVuZUZhbGxQaXp6YXNcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/falld/source/repos/Pizzeria/Views/DegueneFallPizzas/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVndWVuZUZhbGxQaXp6YXNcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/falld/source/repos/Pizzeria/Views/DegueneFallPizzas/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVndWVuZUZhbGxQaXp6YXNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/falld/source/repos/Pizzeria/Views/DegueneFallPizzas/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVndWVuZUZhbGxQaXp6YXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/falld/source/repos/Pizzeria/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
